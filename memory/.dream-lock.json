@@ -1,6 +1,6 @@
 {
   "lastDreamedAt": "2026-04-04T06:41:00+08:00",
-  "lastExtractedAt": "2026-04-04T19:43:00+08:00",
+  "lastExtractedAt": "2026-04-04T20:43:00+08:00",
   "dreaming": false,
-  "note": "2026-04-04 19:43 extract：1条feedback（cron date预计算陷阱），1条project（GitHub备份仓库已push + 自动备份cron配置）"
+  "note": "2026-04-04 20:43 extract：2条实质性消息。project: SOP+能力表公网访问已开启；GitHub备份首次推送完成。"
 }

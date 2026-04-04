@@ -31,12 +31,22 @@ scope: team
 **待确认**：目标（品牌/招募/转化）、规模、时间、预算、场地
 **负责人**：Johnson
 
-## GitHub 备份仓库（2026-04-04 19:41 ✅）
+## GitHub 备份仓库（2026-04-04 20:41 ✅ 已推送）
 - **仓库**：git@github.com:zczvg2026/OpenClaw.git
 - **内容**：1052 个文件（workspace 全量备份）
 - **SSH Key**：`~/.ssh/id_ed25519.pub`（Johnson 添加到 GitHub）
+- **已推送**：首次 push 完成（20:41 CST）
 - **自动备份**：每天 21:00 CST 执行 `~/.openclaw/auto-backup.sh` → commit + push
 - **日志**：`~/.openclaw/logs/backup.log`
+
+## 龙虾 SOP + 能力表（2026-04-04 20:34 ✅）
+- **SOP文档**（飞书文档）：https://feishu.cn/docx/MJ6hdhTbMo0ooex8BhfcdcRrnBg
+  - 含：初始化清单 / 日常养护 / Skill安装四步 / 异常处理 / 评分维度 / 8条红线 / 命令速查
+  - 已开启「互联网上获得链接的人可阅读」✅
+- **龙虾能力表**（bitable）：https://wcn1vdjagxl2.feishu.cn/base/AnNYbZEExamjupspFxScYTWhnne
+  - 已录入 10 个核心技能，含质量/速度/稳定性三维评分
+  - 已开启「互联网上获得链接的人可阅读」✅
+- **背景**：Johnson 晚间验收 Q3 龙虾能力表时要求两份文件都开启公网阅读
 
 ## Da Zha Xie — 能力建设
 - ✅ 飞书集成（会话、日历、知识库）
