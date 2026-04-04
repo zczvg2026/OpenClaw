@@ -65,7 +65,10 @@ scope: team
 - Johnson 重读 Claude Code 源码（~/Desktop/zczvg/claude-code-complete/）+ WeChat文章
 - 核心结论：Harness层面优化 > 追求更强模型
 - 产出：P0+P1 优化任务并行完成
-- ✅ IMA 日记写入打通（2026-04-03 深夜，note_id: 7445856324188686）
+- ✅ IMA 日记写入打通（2026-04-03 深夜）
+  - ⚠️ 2026-04-04 更新：Johnson 确认要**每天新建一篇笔记**（用 `import_doc`），不要追加到同一篇
+  - 最新日记 note_id（2026-04-04）：`7446213104245602`
+  - 每篇 note_id 记录在 `memory/YYYY-MM-DD.md` 的 `ima_note_id` 字段
 - ✅ OpenCLI Chrome 扩展（2026-04-03 深夜，待 Johnson 加载确认）
 - ✅ 权限分级方案 v1（2026-04-04，memory/agent-tool-permissions.md）— 三级权限：read-only/write/destructive，subagent 完成，Johnson 确认
 - ✅ 双层记忆作用域（private/team，2026-04-04，memory/scope-design.md）— subagent 完成，17 private + 10 team 文件，Johnson 确认

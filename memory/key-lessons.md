@@ -107,8 +107,15 @@ scope: private
 - **How to apply**：涉及动态时间变量的 cron job，必须写成独立 shell 脚本再 cron 调用；不能用一行命令搞定
 - **正确做法**：创建 `~/.openclaw/auto-backup.sh` 脚本，在脚本里用 `$(date)`，cron 只调用脚本路径
 
+## 【反馈】cron 触发器 ≠ 我自己的持久记忆（2026-04-04）
+- 问题：22:30 写IMA日记的 cron 触发器存在于系统，但 SOUL.md / HEARTBEAT.md 里没有任何关于"每天写IMA日记是我必做任务"的描述
+- Why：cron job 是外部调度，和我自身的"灵魂/记忆"是分离的——cron 丢了我就不记得了
+- How to apply：**所有周期性必做任务，必须同时写进 HEARTBEAT.md（或 SOUL.md）的常驻描述里**，不能只依赖 cron 配置
+
 ## IMA凭证失效处理（2026-04-04）
 - 症状：所有IMA接口返回 code:20004 skill auth failed
 - 解决：重新生成 Client ID + API Key（旧的被服务端吊销，无法预先感知）
 - 凭证存 ~/.zshrc（不写进 workspace 文件）
 - 下次遇到同样问题：直接重新生成，不用排查其他原因
+- API Key 最新（2026-04-04 23:07）：`zPNjZeSZJzBVSZ6vanl+/0Dk4khuUaBUFRQaN2/bffjMVjBB2cCWxzh3HLNWA9rey88sTUe3+Q==`
+- Client ID 最新（2026-04-04 23:07）：`1d7058d8e7695e4fb7127a168057977e`（注：旧 Client ID 相同，仅 Key 变了）

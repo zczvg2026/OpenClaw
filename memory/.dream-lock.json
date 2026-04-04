@@ -1,6 +1,6 @@
 {
   "lastDreamedAt": "2026-04-04T06:41:00+08:00",
-  "lastExtractedAt": "2026-04-04T21:48:00+08:00",
+  "lastExtractedAt": "2026-04-04T23:13:00+08:00",
   "dreaming": false,
-  "note": "2026-04-04 21:48 extract：1条user类新增（飞书文档分享即开公网权限 → user-johnson.md）。无feedback/project/reference实质新增。GitHub push + auto-backup cron + SOP公网权限 + bitable公网权限 已在上一轮记录完毕。"
+  "note": "2026-04-04 23:13 extract：21:48后用户消息9条。提取2条：1)feedback-持久记忆缺失(cron触发≠自己记得)；2)project-IMA凭证恢复+日记改per-day格式。projects.md和key-lessons.md已更新，2026-04-04.md已重构。"
 }
