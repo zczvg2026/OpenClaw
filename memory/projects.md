@@ -60,8 +60,6 @@ scope: team
 - **自动备份**：每天 21:00 CST 执行 `~/.openclaw/auto-backup.sh` → commit + push
 - **备份脚本**：`~/.openclaw/auto-backup.sh`（解决 crontab 里 $(date) 预计算问题）
 - **日志**：`~/.openclaw/logs/backup.log`
-- **自动备份**：每天 21:00 CST 执行 `~/.openclaw/auto-backup.sh` → commit + push
-- **日志**：`~/.openclaw/logs/backup.log`
 
 ## 龙虾 SOP + 能力表（2026-04-04 20:34 ✅）
 - **SOP文档**（飞书文档）：https://feishu.cn/docx/MJ6hdhTbMo0ooex8BhfcdcRrnBg
