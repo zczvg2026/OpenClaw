@@ -101,3 +101,9 @@ scope: private
 - 调用 `PATCH https://open.feishu.cn/open-apis/drive/v1/permissions/{token}/public?type=docx`
 - Body: `{"link_share_entity": "anyone_readable"}`
 - 注意：`type` 必须放 query 参数，不能放 body
+
+## 【反馈】auto-backup cron 陷阱：$(date) 在 crontab 里会被预计算（2026-04-04）
+- **问题**：直接写 `git commit -m "auto-backup-$(date +%Y%m%d)"` 在 crontab 里，`$(date)` 会在**安装时**被计算，而非运行时
+- **Why**：crontab 文件没有 shebang，不走 shell 解析，变量在安装时就被展开
+- **How to apply**：涉及动态时间变量的 cron job，必须写成独立 shell 脚本再 cron 调用；不能用一行命令搞定
+- **正确做法**：创建 `~/.openclaw/auto-backup.sh` 脚本，在脚本里用 `$(date)`，cron 只调用脚本路径

@@ -31,6 +31,13 @@ scope: team
 **待确认**：目标（品牌/招募/转化）、规模、时间、预算、场地
 **负责人**：Johnson
 
+## GitHub 备份仓库（2026-04-04 19:41 ✅）
+- **仓库**：git@github.com:zczvg2026/OpenClaw.git
+- **内容**：1052 个文件（workspace 全量备份）
+- **SSH Key**：`~/.ssh/id_ed25519.pub`（Johnson 添加到 GitHub）
+- **自动备份**：每天 21:00 CST 执行 `~/.openclaw/auto-backup.sh` → commit + push
+- **日志**：`~/.openclaw/logs/backup.log`
+
 ## Da Zha Xie — 能力建设
 - ✅ 飞书集成（会话、日历、知识库）
 - ✅ 定时 cron（起床/喝水/睡觉提醒，自动技能更新）
