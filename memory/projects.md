@@ -31,11 +31,14 @@ scope: team
 **待确认**：目标（品牌/招募/转化）、规模、时间、预算、场地
 **负责人**：Johnson
 
-## GitHub 备份仓库（2026-04-04 20:41 ✅ 已推送）
+## GitHub 备份仓库（2026-04-04 21:05 ✅ 已推送）
 - **仓库**：git@github.com:zczvg2026/OpenClaw.git
 - **内容**：1052 个文件（workspace 全量备份）
-- **SSH Key**：`~/.ssh/id_ed25519.pub`（Johnson 添加到 GitHub）
-- **已推送**：首次 push 完成（20:41 CST）
+- **SSH Key**：`~/.ssh/id_ed25519.pub`（Johnson 已添加到 GitHub 账户）
+- **首次推送**：21:05 CST 完成（首次push需拉取远程README后rebase再push）
+- **自动备份**：每天 21:00 CST 执行 `~/.openclaw/auto-backup.sh` → commit + push
+- **备份脚本**：`~/.openclaw/auto-backup.sh`（解决 crontab 里 $(date) 预计算问题）
+- **日志**：`~/.openclaw/logs/backup.log`
 - **自动备份**：每天 21:00 CST 执行 `~/.openclaw/auto-backup.sh` → commit + push
 - **日志**：`~/.openclaw/logs/backup.log`
 
