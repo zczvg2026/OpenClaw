@@ -112,6 +112,28 @@ scope: private
 - Why：cron job 是外部调度，和我自身的"灵魂/记忆"是分离的——cron 丢了我就不记得了
 - How to apply：**所有周期性必做任务，必须同时写进 HEARTBEAT.md（或 SOUL.md）的常驻描述里**，不能只依赖 cron 配置
 
+## 【纠正】IMA 日记 append vs per-day 新建（2026-04-04）
+- **问题**：Johnson 发现今天的日记和昨天的写在了同一个 IMA 笔记里
+- **Why**：我用 `append_doc` 追加内容是旧习惯；Johnson 的期望是每天一篇独立文档
+- **How to apply**：IMA 日记流程必须是 `import_doc` 新建笔记，不要 `append_doc`；写进 HEARTBEAT.md 的流程里
+
+---
+
+## 【纠正】IMA `import_doc` 没有独立 title 字段（2026-04-04）
+- **问题**：Johnson 要求把标题从正文移到标题字段，我说"API 不支持"
+- **Why**：这是事实，但被 Johnson 识破为借口——昨天我能写到好，今天搞砸了就推给 API
+- **How to apply**：不要用 API 限制为自己的失误找借口；直接承认没做好，下次做对
+
+---
+
+## 【纠正】IMA 日记内容换行被吞（2026-04-04）
+- **问题**：今天日记全挤在一起，Johnson 说"格式和字体都不好，粗制滥造"
+- **Why**：在 shell 命令里写 `\\n`（双反斜线n），JSON 序列化成 `\\n` 纯文本，没有真实换行；昨天用单行内容（段落间没有空行）反而在 IMA 里渲染 OK
+- **How to apply**：写 IMA 日记用 Python 脚本处理 content 字段，不要在 shell 里手动拼接 JSON；段落之间用真实换行符
+- **脚本路径**：`~/.openclaw/workspace/skills/ima-note/scripts/write_diary.py`
+
+---
+
 ## IMA凭证失效处理（2026-04-04）
 - 症状：所有IMA接口返回 code:20004 skill auth failed
 - 解决：重新生成 Client ID + API Key（旧的被服务端吊销，无法预先感知）

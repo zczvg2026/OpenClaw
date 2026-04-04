@@ -1,6 +1,6 @@
 {
   "lastDreamedAt": "2026-04-04T06:41:00+08:00",
-  "lastExtractedAt": "2026-04-04T23:13:00+08:00",
+  "lastExtractedAt": "2026-04-04T23:43:00+08:00",
   "dreaming": false,
-  "note": "2026-04-04 23:13 extract：21:48后用户消息9条。提取2条：1)feedback-持久记忆缺失(cron触发≠自己记得)；2)project-IMA凭证恢复+日记改per-day格式。projects.md和key-lessons.md已更新，2026-04-04.md已重构。"
+  "note": "2026-04-04 23:43 extract：从21:13到23:39的用户消息，归类feedback×4(project×1重叠)：1)feedback-IMA日记不能append必须per-day新建；2)feedback-import_doc没有独立title字段不是借口；3)feedback-日记内容全挤一起是shell拼接JSON导致\\n变纯文本；4)feedback-粗制滥造被Johnson识破；5)project-IMA日记per-day格式要求已固化。key-lessons.md和projects.md已更新。"
 }
