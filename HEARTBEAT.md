@@ -25,7 +25,16 @@
 
 做得好保持，做得不好记录到 .learnings/LEARNINGS.md 并反思改进。
 
-## Context 压缩检查（被动）
+## 每日IMA日记（必做）
+
+每天 **22:30 前** 将当日最重要的 3-5 件事写入 IMA 日记（note_id: 7445856324188686）。
+
+**流程：**
+1. 读取 `memory/YYYY-MM-DD.md` 当日笔记
+2. 提炼成结构化日记（最重要的一件事 + 主要工作内容 + 教训 + 明日展望 + 金句）
+3. 调用 IMA append_doc 接口写入
+
+**凭证预检：** 先验证 IMA_OPENAPI_CLIENTID / IMA_OPENAPI_APIKEY 可用（凭证偶发失效，遇 20004 直接重新生成 Key）。
 
 - compaction 已配置 safeguard + memoryFlush，会自动触发
 - 仅当 session 对话轮次明显过长（>20轮）时，主动提议压缩
