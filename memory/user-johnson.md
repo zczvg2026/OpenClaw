@@ -75,6 +75,12 @@ scope: private
   - 工具：IMA OpenAPI（ClientID: 1d7058d8e7695e4fb7127a168057977e）
   - 已读：19篇笔记，混沌创商院战略课+ENERGY CELL S2B2C+企业战略研讨等
 
+## 关于做事方式（2026-04-05 确认）
+- **主动读取 IMA 知识库**：Johnson 明确要求我主动去 IMA 知识库读取资料来加深理解，而不是等他告诉我所有事
+- **产品思考三步法固化**：Johnson 明确要求——帮我理解事情或研究产品时，必须先走三步法再给结论，不能直接给结论
+  - 三步：苏格拉底提问 → 第一性原理 → 奥卡姆剃刀
+  - 已写入 SOUL.md 和 memory/knowledge/three-step-thinking.md
+
 ## 工具习惯
 - 飞书：主要协作工具（会话级别模型需单独用 session_status 修改）
 - IMA：个人笔记+知识库（ClientID: 1d7058d8e7695e4fb7127a168057977e）
