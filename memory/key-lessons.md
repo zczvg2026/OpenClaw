@@ -95,3 +95,9 @@ scope: private
 - **规则**：两个子agent并行执行，全部完成，Johnson确认结果
 - **Why**：Johnson说"这两个都做"，执行后确认产出符合预期
 - **How to apply**：下次Johnson说"都做"时，直接并行spawn，不要串行
+## 飞书文档公开分享（2026-04-04）
+开启文档互联网阅读权限（任何人打开链接可读）：
+- 先获取 tenant_access_token
+- 调用 `PATCH https://open.feishu.cn/open-apis/drive/v1/permissions/{token}/public?type=docx`
+- Body: `{"link_share_entity": "anyone_readable"}`
+- 注意：`type` 必须放 query 参数，不能放 body
