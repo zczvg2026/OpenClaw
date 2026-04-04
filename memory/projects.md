@@ -67,8 +67,8 @@ scope: team
 - 产出：P0+P1 优化任务并行完成
 - ✅ IMA 日记写入打通（2026-04-03 深夜）
   - ⚠️ 2026-04-04 更新：Johnson 确认要**每天新建一篇笔记**（用 `import_doc`），不要追加到同一篇
-  - 最新日记 note_id（2026-04-04）：`7446215696349777`（格式问题导致重建多次）
-  - ⚠️ 2026-04-04 教训：shell 里写 `\\n` 会变成纯文本，真实换行用 Python 脚本处理
+  - ⚠️ 2026-04-05 更新：IMA `import_doc` 渲染不稳定，标准流程改为**飞书预览 → 用户确认 → IMA 写入**
+  - 最新日记 note_id（2026-04-04）：`7446225750071610`（先飞书预览后写入，格式确认 ✅）
   - 每篇 note_id 记录在 `memory/YYYY-MM-DD.md` 的 `ima_note_id` 字段
   - 写日记脚本：`~/.openclaw/workspace/skills/ima-note/scripts/write_diary.py`
 - ✅ OpenCLI Chrome 扩展（2026-04-03 深夜，待 Johnson 加载确认）

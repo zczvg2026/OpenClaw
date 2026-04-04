@@ -132,6 +132,12 @@ scope: private
 - **How to apply**：写 IMA 日记用 Python 脚本处理 content 字段，不要在 shell 里手动拼接 JSON；段落之间用真实换行符
 - **脚本路径**：`~/.openclaw/workspace/skills/ima-note/scripts/write_diary.py`
 
+## 【纠正+确认】IMA 日记 workflow 最佳方案：飞书预览 → IMA 写入（2026-04-05）
+- **问题**：Johnson 发现 4号日记标题跑到正文里、正文排版也比 3号差；但 3号好好的，4号突然就不行了
+- **Why**：`import_doc` 接口的 markdown 内容在 IMA 里渲染不稳定——有时候 OK，有时候换行全丢、标题变正文；而飞书消息的富文本格式是稳定的。Johnson 的洞察：先飞书发给用户预览，用户确认后内容格式就锁定了，再写 IMA 就能对上
+- **确认**：Johnson 原话"你试一下"，我按新流程（先飞书预览再写 IMA）执行，note_id: 7446225750071610，格式确认 ✅
+- **How to apply**：IMA 日记的标准流程：① 生成日记正文 → ② 发飞书消息给 Johnson 预览 → ③ 收到确认后写 IMA（用 heredoc 或 Python 脚本 piping 真实换行符）
+
 ---
 
 ## IMA凭证失效处理（2026-04-04）
