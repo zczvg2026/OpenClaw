@@ -27,15 +27,15 @@
 
 ## 每日IMA日记（必做）
 
-每天 **22:30 前** 将当日最重要的 3-5 件事写入 **新的 IMA 笔记**（不要追加到旧笔记里）。
+每天 **22:30 前** 将当日最重要的 3-5 件事写入 **新的 IMA 笔记**。
 
-**流程：**
-1. 读取 `memory/YYYY-MM-DD.md` 当日笔记
-2. 提炼成结构化日记（最重要的一件事 + 主要工作内容 + 教训 + 明日展望 + 金句）
-3. 调用 IMA `import_doc` 接口，**创建新笔记**，标题为 `📅 YYYY-MM-DD | 大闸蟹日记`
-4. 记录返回的 `note_id` 到 `memory/YYYY-MM-DD.md` 的 `ima_note_id` 字段
+**执行方式：** 直接运行脚本，不要手动拼 API
+```bash
+python3 ~/.openclaw/workspace/skills/ima-note/scripts/write_diary.py
+```
+脚本会自动：读取当日 `memory/YYYY-MM-DD.md` → 生成结构化日记 → `import_doc` 新建笔记 → 记录 `note_id` 回当日 memory 文件。
 
-**凭证预检：** 先验证 IMA_OPENAPI_CLIENTID / IMA_OPENAPI_APIKEY 可用（凭证偶发失效，遇 20004 直接重新生成 Key）。
+**凭证预检：** 先验证凭证可用（凭证偶发失效，遇 20004 直接重新生成 Key）。
 
 - compaction 已配置 safeguard + memoryFlush，会自动触发
 - 仅当 session 对话轮次明显过长（>20轮）时，主动提议压缩
