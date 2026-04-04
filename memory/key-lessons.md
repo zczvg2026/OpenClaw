@@ -59,6 +59,31 @@ scope: private
 
 ---
 
+## 【纠正+确认】IMA 日记标准流程：飞书预览 → Johnson 确认 → IMA 写入（2026-04-05）
+- **问题**：`import_doc` 的 markdown 内容在 IMA 里渲染不稳定——换行有时保留有时全丢、标题有时变正文；飞书消息的富文本格式是稳定的
+- **Johnson 的洞察**：先飞书发给用户预览，用户确认后内容格式就锁定了，再写 IMA 就能对上
+- **完整流程**：① 生成日记正文 → ② 发飞书消息给 Johnson 预览（这一步格式被锁定）→ ③ 收到确认后写 IMA（用 heredoc piping 真实换行符）
+- **确认**：执行后 note_id: 7446225750071610，Johnson 确认格式 ✅；但后续 7446228786748850（append_doc 方案）效果待确认
+- **How to apply**：写入 HEARTBEAT.md 的 IMA 日记流程，每次严格执行
+
+---
+
+## 【纠正】IMA 日记换行被吞的根因（2026-04-05）
+- **现象**：Johnson 发现 4号的日记"标题没有在标题里，都在正文里"，且排版比 3号差很多；但 3号是好的
+- **根因**：4号日记用 `import_doc` 一次性导入，markdown `\\n` 被 IMA API 吞掉；3号用 `append_doc` 分段追加，每段独立追加所以部分换行得以保留
+- **Why it matters**：Johnson 给了 A 方案（改用 `append_doc` 逐段追加）让重新写，最终 note_id: 7446228786748850 待确认
+- **How to apply**：IMA 日记写入用 `append_doc` 逐段追加比一次性 `import_doc` 更能保留换行；结合"飞书预览"流程双重保险
+
+---
+
+## 【反馈】遇到陌生内容任务，必须先查 skills/ 再动手（2026-04-04，已六次）
+- **问题**：微信公众号文章任务来时，第一反应是 curl/web_fetch/浏览器/summarize，全套失败后发现 wechat-article-parser 躺在 skills/ 里
+- **Why**：专用工具 vs 通用方案的获取代价完全不同；已记录 6 次"又忘了"的复发
+- **How to apply**：任何"如何获取 X 内容"类型任务，**第一步**查 `skills/` 有没有对应 parser/scraper
+- **触发检查**：TOOLS.md 里已写 `skills/` 优先规则，但执行时仍未本能触发
+
+---
+
 ## 【确认】Johnson 每天早上要 Dream 汇报（2026-04-04）
 - **规则**：每天早上起床后主动汇报大闸蟹做梦（Dream 记忆整合）的结果
 - **Why**：Johnson 希望通过 Dream 结果了解记忆整合情况，主动汇报是他的"检查机制"
