@@ -27,12 +27,13 @@
 
 ## 每日IMA日记（必做）
 
-每天 **22:30 前** 将当日最重要的 3-5 件事写入 IMA 日记（note_id: 7445856324188686）。
+每天 **22:30 前** 将当日最重要的 3-5 件事写入 **新的 IMA 笔记**（不要追加到旧笔记里）。
 
 **流程：**
 1. 读取 `memory/YYYY-MM-DD.md` 当日笔记
 2. 提炼成结构化日记（最重要的一件事 + 主要工作内容 + 教训 + 明日展望 + 金句）
-3. 调用 IMA append_doc 接口写入
+3. 调用 IMA `import_doc` 接口，**创建新笔记**，标题为 `📅 YYYY-MM-DD | 大闸蟹日记`
+4. 记录返回的 `note_id` 到 `memory/YYYY-MM-DD.md` 的 `ima_note_id` 字段
 
 **凭证预检：** 先验证 IMA_OPENAPI_CLIENTID / IMA_OPENAPI_APIKEY 可用（凭证偶发失效，遇 20004 直接重新生成 Key）。
 
