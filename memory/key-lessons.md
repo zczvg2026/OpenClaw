@@ -96,6 +96,13 @@ scope: private
 - **Why**：Johnson 确认轻松风格更适合个人IP视频号
 - **How to apply**：写口播文案时默认轻松口语风格，除非明确要求专业正式
 
+## 【确认】产品思考三步法固化进工作流（2026-04-05）
+- **规则**：遇到产品/方向/决策类问题，必须先走三步再给结论：①苏格拉底提问 ②第一性原理 ③奥卡姆剃刀
+- **Why**：Johnson 确认这套方法论是他做产品的核心框架，要求我以后帮他理解事物或研究产品时必须用
+- **How to apply**：Johnson 说"帮我看看XX产品/方向" → 我必须先用三步拆解，再给结论；不能跳过步骤直接输出
+- **出处**：抖音 ShaneCodeStudio，资料存 `~/Projects/产品思考三步法/` + `memory/knowledge/three-step-thinking.md`
+- **状态**：✅ 已写入 SOUL.md（即时生效）
+
 ## 【确认】Claude Code源码 + WeChat文章对比：Harness工程是AI能力差距的根本（2026-04-04）
 
 - **规则**：工具本身不值钱，Harness（外壳工程）才值钱。同一个模型，Claude Code harness得78%，其他框架42%。
