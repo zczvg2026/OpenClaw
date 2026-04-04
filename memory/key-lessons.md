@@ -106,3 +106,9 @@ scope: private
 - **Why**：crontab 文件没有 shebang，不走 shell 解析，变量在安装时就被展开
 - **How to apply**：涉及动态时间变量的 cron job，必须写成独立 shell 脚本再 cron 调用；不能用一行命令搞定
 - **正确做法**：创建 `~/.openclaw/auto-backup.sh` 脚本，在脚本里用 `$(date)`，cron 只调用脚本路径
+
+## IMA凭证失效处理（2026-04-04）
+- 症状：所有IMA接口返回 code:20004 skill auth failed
+- 解决：重新生成 Client ID + API Key（旧的被服务端吊销，无法预先感知）
+- 凭证存 ~/.zshrc（不写进 workspace 文件）
+- 下次遇到同样问题：直接重新生成，不用排查其他原因
