@@ -123,7 +123,7 @@
     },
     "skill-creator": {
       "version": "0.1.0",
-      "installedAt": 1774432621938
+      "installedAt": 1775331322619
     },
     "clawddocs": {
       "version": "1.2.2",
@@ -344,6 +344,10 @@
     "web-content-fetcher": {
       "version": "1.0.1",
       "installedAt": 1775224922567
+    },
+    "summarize-pro": {
+      "version": "1.0.0",
+      "installedAt": 1775331305954
     }
   }
 }

@@ -26,7 +26,8 @@ scope: private
 - Dream cron 完成后主动向 Johnson 推送一句话总结
 - 原因：Johnson 用 Dream 结果作为检查机制
 
-## 【确认+纠正】IMA 日记标准流程（2026-04-05 最终确认）
+## 【确认+纠正】IMA 日记时间 + 标准流程（2026-04-05 最终确认）
+- **时间**：每天晚上 22:30 写，不用早上（Johnson 2026-04-05 下午明确：每天晚上10点半写）
 - **完整流程**：飞书预览 → Johnson 确认 → IMA 写入（`import_doc` 渲染不稳定，需双重保险）
 - **根因**：一次性 `import_doc` 换行有时保留有时全丢；飞书富文本格式稳定，预览后内容锁定
 - **注意**：每天新建一篇独立笔记（`import_doc`），不追加到同一篇
@@ -37,6 +38,17 @@ scope: private
 ## 【确认】Johnson 要求主动读 IMA 知识库（2026-04-05）
 - 涉及 Johnson 公司/行业背景 → 先查 IMA 知识库 → 再结合已掌握信息给判断
 - IMA API ClientID: `1d7058d8e7695e4fb7127a168057977e`
+
+## 【纠正】IMA 知识库读取优先级（2026-04-05 07:40）
+- 症状：我在 IMA 里乱碰碎片（ENERGY CELL/OpenClaw热潮等），完全没找到 Johnson 真正想让我读的"探迹公司介绍"和"探域公司介绍"
+- Why：IMA 里碎片太多，没有先确认优先级就开读，读错方向了
+- How to apply：Johnson 给方向 → 先找对应文档 → 再读；IMA 不是用来"全面了解"的，是按需查的
+
+## 【确认】ENERGY CELL 与 域擎 OPC联盟 完全独立（2026-04-05 07:40）
+- Johnson 亲口确认：两个项目没有关联，是完全独立的方向
+- ENERGY CELL：健康品牌（悠悠富氢水机 + 健康产品）
+- 域擎 OPC联盟：商业联盟平台（资料在 IMA）
+- 不要再试图找它们的关联
 
 ## 【确认】混沌创商院是"实战打磨"场所（2026-04-05）
 - Johnson 带真实问题去研讨，不是学知识
@@ -60,6 +72,13 @@ scope: private
 
 ## 【反馈】cron 触发器 ≠ 持久记忆（2026-04-04）
 - 所有周期必做任务必须写进 HEARTBEAT.md，不能只依赖 cron 配置
+
+## 【纠正+确认】重复 cron 导致飞书每日噪音（2026-04-05 ✅ 已禁用）
+- 症状：cron任务"安装ClawHub技能"（4541798a）每6小时执行→飞书重复推送安装结果，Johnson每日被噪
+- Why：任务完成后没有立即禁用cron，留着"以后可能用"导致持续推送
+- How to apply：cron任务完成后立即禁用或删除，不要"留着"；定期审计已禁用cron
+- **✅ 已禁用**（2026-04-05 22:07）：Gateway 重启后执行 `openclaw cron disable 4541798a-a103-40c2-b4cb-4403380eb31a` 成功
+- **教训补充**：`cron disable` 需 Gateway 在运行；Gateway 故障时 disable 静默失败，必须验证 jobs.json 里 `"enabled": false`
 
 ## IMA 凭证失效处理（2026-04-04）
 - 症状：code 20004 skill auth failed
